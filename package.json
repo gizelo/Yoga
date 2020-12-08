@@ -1,0 +1,26 @@
+{
+  "name": "yoga",
+  "version": "1.0.0",
+  "description": "yoga landing page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gizelo/Yoga.git"
+  },
+  "keywords": [
+    "yoga"
+  ],
+  "author": "gizelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gizelo/Yoga/issues"
+  },
+  "homepage": "https://github.com/gizelo/Yoga#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2"
+  }
+}
