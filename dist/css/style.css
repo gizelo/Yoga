@@ -1,0 +1,116 @@
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.container-sm {
+    max-width: 830px;
+    margin: auto;
+}
+
+.header {
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 50%;
+}
+
+.navbar-menu li a {
+    color: #555555;
+    position: relative;
+}
+
+.navbar-menu li a:hover {
+    color: #5b6ceb;
+}
+
+.navbar-menu li a:hover::after {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.navbar-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 2px;
+    background-color: #5b6ceb;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.navbar-menu_left li {
+    margin-right: 25px;
+}
+
+.navbar-menu_right {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.navbar-menu_right li {
+    margin-left: 25px;
+}
+
+.main {
+    height: 500px;
+    background: #5b6ceb;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: local("./fonts/OpenSans");
+}
+
+@font-face {
+    font-family: FreestyleScript;
+    src: local("./fonts/FreestyleScript.ttf");
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+body {
+    font-family: OpenSans, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
