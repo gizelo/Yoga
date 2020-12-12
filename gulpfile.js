@@ -14,7 +14,7 @@ let path = {
         css: source_folder + "/scss/*.scss",
         js: source_folder + "/js/script.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-        fonts: source_folder + "/fonts/*.ttf",
+        fonts: source_folder + "/fonts/**/*.ttf",
     },
     watch: {
         html: source_folder + "/**/*.html",
@@ -102,6 +102,12 @@ function img() {
         .pipe(brSync.stream());
 }
 
+function fonts() {
+    return src(path.src.fonts)
+        .pipe(dest(path.build.fonts))
+        .pipe(brSync.stream());
+}
+
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
@@ -113,9 +119,10 @@ function del() {
     return dlt(path.clean);
 }
 
-let build = gulp.series(del, gulp.parallel(js, css, html, img));
+let build = gulp.series(del, gulp.parallel(js, css, html, img, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.fonts = fonts;
 exports.img = img;
 exports.js = js;
 exports.css = css;

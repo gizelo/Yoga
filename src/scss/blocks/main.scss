@@ -1,4 +1,7 @@
 .main {
   height: 500px;
-  background: #5b6ceb;
+  //background-image: image('./img/mainBg.png');
+  background-image: url('https://i.pinimg.com/originals/a3/8e/66/a38e66e215b90a6edc273189798777ad.jpg');
+  background-position: center;
+  background-size: cover;
 }
